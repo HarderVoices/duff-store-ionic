@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'pilsen', loadChildren: './pilsen/pilsen.module#PilsenPageModule' },
   { path: 'kolsh', loadChildren: './kolsh/kolsh.module#KolshPageModule' },
   { path: 'heineken', loadChildren: './heineken/heineken.module#HeinekenPageModule' },
-  { path: 'cerveja-detalhes', loadChildren: './cerveja-detalhes/cerveja-detalhes.module#CervejaDetalhesPageModule' },
+  { path: 'cerveja-detalhes/:id', loadChildren: './cerveja-detalhes/cerveja-detalhes.module#CervejaDetalhesPageModule' },
 ];
 
 @NgModule({
