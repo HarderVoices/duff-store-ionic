@@ -7,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeinekenPage implements OnInit {
 
+  nome;
+  detalhes;
+
   constructor() {
     this.nome = "Heineken";
     this.detalhes = "Lager beer, Premium Quality";
    }
 
   ngOnInit() {
+
   }
 
 }

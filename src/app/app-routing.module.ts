@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'kolsh', loadChildren: './kolsh/kolsh.module#KolshPageModule' },
   { path: 'heineken', loadChildren: './heineken/heineken.module#HeinekenPageModule' },
   { path: 'cerveja-detalhes/:id', loadChildren: './cerveja-detalhes/cerveja-detalhes.module#CervejaDetalhesPageModule' },
+  { path: 'cerveja', loadChildren: './cerveja/cerveja.module#CervejaPageModule' },
 ];
 
 @NgModule({
