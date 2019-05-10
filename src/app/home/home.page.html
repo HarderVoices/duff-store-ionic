@@ -1,22 +1,40 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="title">
-      Duff Store
+    <ion-title>
+      Loja de Cerveja
     </ion-title>
-    <ion-buttons slot="primary">
-      <ion-button [routerLink]="['/cerveja']" >
-        <ion-icon name="add-circle">Add</ion-icon>
+    <ion-buttons slot='primary'>
+      <ion-button [routerLink]='["/add-cerveja"]'>
+        <ion-icon color='danger' name='add-circle' ></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <h1 class="titulo">Bem vindo</h1>
-  <p>Bem vindo ao app de cerveja mais famoso do brasil</p>
-    <ion-img class="im" src="assets/duff-logo.png"></ion-img>
-      <ion-button color="danger" [routerLink]="['/heineken']">Heineken</ion-button>
-      <ion-button color="danger" [routerLink]="['/puro-malte']">Proibida</ion-button>
-      <ion-button color="danger" [routerLink]="['/pilsen']">Eisenbahn</ion-button>
-      <ion-button color="danger" [routerLink]="['/kolsh']">Kölsh </ion-button>
+  <h6>Bem vindo ao app de cerveja, mais famoso do Brasil.</h6>
+  <div *ngIf="cervejas.length > 0">
+    <h2>Conheça nossas cervejas</h2>
+    <div *ngFor="let cerveja of cervejas">
+      <ion-card (click)="detalhes(cerveja.nome)">
+          <ion-card-content>
+              <h2>{{cerveja.nome}}</h2>
+              <p> {{cerveja.descricao}} </p>
+              <p style="text-align: right">
+                <ion-button color="danger" fill="outline" size="small" (click)="excluir(cerveja.nome)">Excluir</ion-button>
+              </p>
+          </ion-card-content>
+        </ion-card>
+    </div>
+  </div>
+  <div >
+  </div>
+  
+  <div *ngIf = "cervejas.length === 0">
+    <p>Ainda não há cervejas cadastradas</p>
+    <ion-button [routerLink] ='["/add-cerveja"]'>Cadastrar Agora</ion-button>
+  </div>
+
+
+
 </ion-content>

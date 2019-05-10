@@ -1,7 +1,7 @@
 {
   "name": "duff-store",
   "version": "0.0.1",
-  "author": "Matheus Destefani",
+  "author": "Thiago Trindade",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -54,5 +54,5 @@
     "tslint": "~5.12.0",
     "typescript": "~3.1.6"
   },
-  "description": "App loja de cerveja"
+  "description": "App store beer"
 }
